@@ -9,8 +9,9 @@
 		color: #E85A4F;
 	}
 
-	p, h1, h2{
+	p, h1, h2 {
 		font-family: Montserrat, monospace;
+		position: relative;
 	}
 
 	body {
@@ -35,19 +36,45 @@
 	.content {
 		color: black;
 		font-size: 20px;
-		padding: 140px 120px 2px 120px;
+		padding: 140px 100px 2px 100px;
 		text-align: justify;
+		position: absolute;
+	}
+
+	.right-foot {
+		float: right;
+		width: 40%;
+		height: 50px;
+		text-align: center;
+		padding: -10px 0px 0px 0px;
+	}
+
+	.left-foot {
+		float: left;
+		width: 40%;
+		height: 50px;
+		text-align: center;
+		color: white;
 	}
 
 	.footer {
 		height: 50px;
-		width: 120%;
+		width: 100%;
 		background-color: #898989;
-		position: absolute;
+		position: fixed;
 		bottom: 10px;
 		left: 0px;
 		opacity: 0.85;
+	}
 
+	.footer-link {
+		color: white;
+	}
+
+	.social-network {
+		width: 30px;
+		vertical-align: bottom;
+		padding: 10px 10px 0px 10px;
 	}
 
 </style>
@@ -64,22 +91,16 @@
 		<div class="content">
 			<p>I am a Software Engineer, experienced in Software Testing, Automation and testing tools development with more than 6 years in the industry. Born in Mexico and residing in Austin, TX. I work at <a href="https://dextratech.com/" target="_blank">Dextra Technologies</a>. Prior to that, I worked at <a href="https://www.aptiv.com/" target="_blank">Aptiv</a> as a Software Test Engineer.</p>
 			<p>Bachelor in Mechatronics Engineering - Nov 2016 at <a href="https://www.tecnm.mx/" target="_blank">TecNM</a>.<br> M.S. in Computer Sciences - Present at <a href="https://www.utexas.edu/" target="_blank">UT Austin</a>.</p>
-
-			<p>Download my resume <a href="resources/resume_bespinoza.pdf" target="_blank">here</a>.</p>
-
-			<h2>Contact</h2>
-			<ul>
-				<li>
-					<a href="https://www.linkedin.com/in/bryanespinozam/" target="_blank">LinkedIn</a>
-				</li>
-				<li>
-					<a href="https://github.com/pySerialKiller" target="_blank">GitHub</a>
-				</li>
-				<li>
-					<a href="mailto:bryan.espinoza.dev@gmail.com" target="_blank">Gmail</a>
-				</li>
-			</ul>
 		</div>
-		<div class="footer"></div>
+		<div class="footer">
+			<div class="left-foot">
+				<p><a href="resources/resume_bespinoza.pdf" target="_blank" class="footer-link"><strong>Download my resume</strong></a></p>
+			</div>
+			<div class="right-foot">
+				<a href="https://www.linkedin.com/in/bryanespinozam/" target="_blank"><img class="social-network" src="resources/in_icon.png"></a>
+				<a href="https://github.com/pySerialKiller" target="_blank"><img class="social-network" src="resources/gmail.png"></a>
+				<a href="mailto:bryan.espinoza.dev@gmail.com" target="_blank"><img class="social-network" src="resources/github.png"></a>
+			</div>
+		</div>
 	</body>
 </html>
