@@ -6,39 +6,89 @@
 	a {
 		font-family: Montserrat, monospace;
 		text-decoration: none;
-		color: #E85A4F;
+		color: #FFDF6C;
 	}
 
-	p, h1, h2 {
+	p, h1, h2, h4{
 		font-family: Montserrat, monospace;
-		position: relative;
 	}
 
 	body {
 		/*background-color: #EAE7DC;*/
-		background: linear-gradient(rgba(255,255,255,.75), rgba(255,255,255,.75)), url("resources/background.jpeg");
+	}
+
+	.nav-links {
+		filter: saturate(5);
+		color: white;
+		vertical-align: center
+		padding-right: 25px !important;
+		padding-left: 25px !important;
+		transition: 600ms
+	}
+
+	.main-navigator a:hover {
+		color: #FFDF6C;
 	}
 
 	.main-ribbon {
 		color: white;
-		background-color: #898989;
-		font-size: 24px;
-		top: 10px;
+		top: 0px;
 		left: 0px;
 		position: fixed;
-		width: 100%;
+		width: 100vw;
 		text-align: center;
-		height: 110px;
-		box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-		opacity: 0.85;
+		height: 8vh;
+		z-index: 3;
+	}
+
+	.main-icon {
+		text-align: left;
+		width: 30%;
+		float: left;
+		padding: 0px 0px 0px 0px;
+		position: relative;
+		left: 20px;
+		top: -5px;
+	}
+
+	.main-navigator {
+		text-align: center;
+		width: 30%;
+		float: right;
+		font-size: 16px;
+		padding: 25px;
 	}
 
 	.content {
-		color: black;
-		font-size: 20px;
-		padding: 140px 100px 2px 100px;
+		background-color: #202020;
+		color: #FFFFFF;
+		font-size: 2vh;
+		padding: 10vh 10vw 0vh 10vw;
 		text-align: justify;
 		position: absolute;
+		float: center;
+		height: 40vh;
+		left: 0px;
+		top: 0px;
+		z-index: 2;
+	}
+
+	.left-content {
+		float: left;
+		width: 50%;
+		height: 50%;
+	}
+
+	.right-content {
+		float: right;
+		widht: 50%;
+		height: 50%;
+		vertical-align: center;
+	}
+
+	.profile-photo {
+		width: 250px;
+		padding: 15% 0% 0% -10%;
 	}
 
 	.right-foot {
@@ -55,14 +105,15 @@
 		height: 50px;
 		text-align: center;
 		color: white;
+		padding: 10px;
 	}
 
 	.footer {
 		height: 50px;
 		width: 100%;
-		background-color: #898989;
+		background-color: #202020;
 		position: fixed;
-		bottom: 10px;
+		bottom: 0px;
 		left: 0px;
 		opacity: 0.85;
 	}
@@ -77,6 +128,102 @@
 		padding: 10px 10px 0px 10px;
 	}
 
+	.download-button {
+		color: #FFDF6C;
+		background-color: #202020;
+		border: 2px solid #FFDF6C;
+		padding: 5px;
+		vertical-align: center;
+		transition-duration: 0.6s;
+		border-radius: 5px;
+	}
+
+	.download-button:hover {
+		color: #202020 !important;
+		background-color: #CCAC49;
+		border-radius: 5px;
+	}
+
+	.experience {
+		width: 100vw;
+		height: 40vh;
+		background-color: white;
+		padding: 55vh 5vw 0vh 5vw;
+		text-align: center;
+		display: flex;
+		position: fixed;
+		float: center;
+		left: calc(50vw - 535px);
+	}
+
+	.fullCard {
+		text-indent: 10px;
+	    width: 350px;
+	    border: 3px solid #FFDF6C;
+	    border-radius: 5px;
+	    margin: 10px 5px;
+	    padding: 4px;
+	    background-color: #707070;
+	    color: #FFFFFF;
+	    float: left;
+	  }
+
+    .fullCard2 {
+		text-indent: 10px;
+	    width: 350px;
+	    border: 3px solid #FFDF6C;
+	    border-radius: 5px;
+	    margin: 10px 5px;
+	    padding: 0px 200px 0px 0px;
+	    background-color: #707070;
+	    color: #FFFFFF;
+	    float: right;
+	}
+
+	.cardContent {
+	    padding: 10px;
+	  }
+
+	.cardText {
+	    margin-bottom: 30px;
+	  }
+
+	.cardText h4 {
+		text-align: right;
+		font-size: 20px;
+	}
+
+	.card {
+		/*display: flex;*/
+		height: 150px;
+	    width: 350px;
+	    background-color: #3F3F3F;
+        border-radius: 2px;
+        transition: 0.4s ease-out;
+        margin-right: -50px;
+        box-shadow: 0.5rem 0 3rem #000;
+        float: center;
+        text-align: center;
+        color: #FFDF6C;
+        opacity: 0.85;
+	}
+
+	.card h4 {
+		text-align: center;
+	}
+
+	.card:hover {
+		transform: translateY(-20px);
+		z-index: 9999 !important;
+		transition: 0.2s ease-out;
+		opacity: 1.0;
+	}
+
+	.exp-logo {
+		padding: 0.5vh 10% 0.5vh 10%;
+		float: center;
+		width: 250px;
+	}
 </style>
 
 <html>
@@ -86,15 +233,48 @@
 	</head>
 	<body>
 		<div class="main-ribbon">
-			<h1>Bryan Espinoza - Software Engineer</h1>
+			<div class="main-icon">
+				<h1>Bryan Espinoza</h1>
+			</div>
+			<nav class="main-navigator">
+				<a class="nav-links" href="https://www.google.com" target="_blank">About</a>
+				<a class="nav-links">Contact</a>
+				<a class="nav-links">Projects</a>
+			</nav>
 		</div>
+
 		<div class="content">
-			<p>I am a Software Engineer, experienced in Software Testing, Automation and testing tools development with more than 6 years in the industry. Born in Mexico and residing in Austin, TX. I work at <a href="https://dextratech.com/" target="_blank">Dextra Technologies</a>. Prior to that, I worked at <a href="https://www.aptiv.com/" target="_blank">Aptiv</a> as a Software Test Engineer.</p>
-			<p>Bachelor in Mechatronics Engineering - Nov 2016 at <a href="https://www.tecnm.mx/" target="_blank">TecNM</a>.<br> M.S. in Computer Sciences - Present at <a href="https://www.utexas.edu/" target="_blank">UT Austin</a>.</p>
+			<div class="left-content">
+				<p>Software Engineer, experienced in Software Testing, Automation and testing tools development with more than 6 years in the industry. Born in Mexico and residing in Austin, TX. I work at <a href="https://dextratech.com/" target="_blank">Dextra Technologies</a>. Prior to that, I worked at <a href="https://www.aptiv.com/" target="_blank">Aptiv</a> as a Software Test Engineer.</p>
+				<p>Bachelor in Mechatronics Engineering - Nov 2016 at <a href="https://www.tecnm.mx/" target="_blank">TecNM</a>.<br> M.S. in Computer Sciences - Present at <a href="https://www.utexas.edu/" target="_blank">UT Austin</a>.</p>
+			</div>
+			<div class="right-content">
+					<img class="profile-photo" src="resources/myself.png">
+			</div>
 		</div>
+
+		<div class="experience">
+			<div class="card" style="z-index: 3;">
+				<h4>Dextra Technologies</h4>
+				<h4>SDET</h4>
+			</div>
+
+			<div class="card" style="z-index: 2;">
+				<h4>Aptiv</h4>
+				<h4>Software Test Engineer</h4>
+			</div>
+
+			<div class="card" style="z-index: 1;">
+				<h4>Delphi</h4>
+				<h4>Software Test Internship</h4>
+			</div>
+    	</div>
+
 		<div class="footer">
 			<div class="left-foot">
-				<p><a href="resources/resume_bespinoza.pdf" target="_blank" class="footer-link"><strong>Download my resume</strong></a></p>
+				<button type="button" class="download-button">
+					<a href="resources/resume_bespinoza.pdf" target="_blank">Download my resume</a>
+				</button>
 			</div>
 			<div class="right-foot">
 				<a href="https://www.linkedin.com/in/bryanespinozam/" target="_blank"><img class="social-network" src="resources/in_icon.png"></a>
